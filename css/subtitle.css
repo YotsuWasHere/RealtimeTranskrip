@@ -45,6 +45,9 @@
 @keyframes k-zoom{from{transform:scale(calc(1 + var(--pw)*2.5)) rotate(var(--rot));opacity:0}}
 @keyframes k-skew{from{transform:translateX(calc(var(--pw)*-70px)) skewX(calc(var(--pw)*-40deg)) rotate(var(--rot));opacity:0}}
 
+.fixed{animation:fixflash .7s ease-out}
+@keyframes fixflash{0%{transform:scale(1.3) rotate(var(--rot));filter:brightness(1.9) saturate(1.4)}100%{transform:scale(1) rotate(var(--rot));filter:none}}
+
 /* ===== keluar ===== */
 [class*=out-]{animation-duration:var(--outD);animation-delay:var(--delay);animation-fill-mode:both;animation-timing-function:ease-in}
 .out-fade{animation-name:o-fade}.out-pop{animation-name:o-pop}.out-drop{animation-name:o-drop}.out-up{animation-name:o-up}

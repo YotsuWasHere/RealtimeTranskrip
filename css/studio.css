@@ -37,6 +37,10 @@ button.mini{padding:3px 9px;font-size:11px;border-radius:8px}
 .meter{height:6px;border-radius:9px;background:var(--bg2);overflow:hidden;margin:2px 0 10px;border:1px solid var(--line)}
 .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#4ade80,var(--acc));transition:width .06s}
 #status{font-size:11px;color:var(--mute);min-height:30px;margin-top:4px}
+textarea{width:100%;min-height:52px;resize:vertical;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 9px;font:inherit}
+input[type=password]{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 9px;font:inherit}
+.card>.ctl{margin-bottom:8px}
+#acLog{font-size:11px;color:var(--mute);min-height:34px;white-space:pre-line;margin-top:6px}
 input[type=text],select{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 9px}
 .body{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;margin-bottom:8px}
 .ctl{grid-column:1/-1;margin-bottom:6px}.ctl.half{grid-column:auto}
@@ -68,3 +72,9 @@ body.obs #pv{position:fixed;inset:0;z-index:9;border-radius:0;border:0;padding:0
 body.obs #pv .ch,body.obs #pv .cf{display:none}
 body.obs #pv .stage{position:absolute;inset:0;border:0;border-radius:0;background:var(--stagebg)}
 body.obs.chroma #pv .stage{background:#00ff00}
+
+.warn{margin:0 0 14px;padding:10px 14px;border-radius:12px;border:1px solid #b45309;background:color-mix(in srgb,#f59e0b 16%,var(--bg2));font-size:12px;line-height:1.5}
+.warn code{background:var(--bg);padding:1px 6px;border-radius:6px}
+body.obs .warn{display:none}
+
+.heard{font-size:11px;color:var(--mute);margin:-4px 0 10px;min-height:16px;word-break:break-word}

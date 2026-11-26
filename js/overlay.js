@@ -5,6 +5,7 @@ function handle(m) {
   else if (m.t === 'text') eng.text(m.v, m.lv);
   else if (m.t === 'feed') eng.feed(m.v);
   else if (m.t === 'cap') eng.caption(m.v);
+  else if (m.t === 'fix') eng.fix(m.i, m.from, m.to);
   else if (m.t === 'clear') eng.clear();
   else if (m.t === 'reset') eng.reset();
 }

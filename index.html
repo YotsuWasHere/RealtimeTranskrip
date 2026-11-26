@@ -16,6 +16,11 @@
   </div>
 </header>
 
+<div id="fileWarn" class="warn" hidden>
+  <b>Izin mic diminta terus karena halaman dibuka lewat <code>file://</code>.</b> Chrome tidak menyimpan izin mic untuk file lokal.
+  Jalankan <code>start-windows.bat</code> / <code>start-mac-linux.sh</code> lalu buka <code>http://localhost:3000</code>, izin cukup sekali.
+  Tanpa Node.js: jalankan <code>python -m http.server 8000</code> di folder ini, lalu buka <code>http://localhost:8000</code>.
+</div>
 <div class="grid">
   <section class="card wide" id="pv">
     <div class="ch"><b>Preview</b><span class="info" id="pvInfo"></span></div>
@@ -27,6 +32,7 @@
     <div class="ch"><b>Mic Engine</b><span class="info" id="micInfo">Siap</span></div>
     <div class="row"><button id="mic" class="main">Mulai mic</button><button id="rec" class="rec">● REC</button></div>
     <div class="meter"><i id="meter"></i></div>
+    <div id="heard" class="heard">Terdengar: —</div>
     <div class="row sm"><button id="srt" disabled>Unduh .srt</button><button id="txtx" disabled>Unduh .txt</button></div>
     <div class="body" data-body="mic"></div>
     <div class="row"><button id="test">Test animasi</button><button id="clear">Bersihkan</button></div>
@@ -38,6 +44,13 @@
   <section class="card"><div class="ch"><b>Font &amp; Tipografi</b></div><div class="body" data-body="font"></div></section>
   <section class="card"><div class="ch"><b>Warna, Kotak &amp; Glow</b></div><div class="body" data-body="color"></div></section>
   <section class="card"><div class="ch"><b>Efek Pintar</b></div><div class="body" data-body="smart"></div></section>
+  <section class="card">
+    <div class="ch"><b>Autocorrect</b><span class="info" id="acInfo">Mati</span></div>
+    <div class="body" data-body="ac"></div>
+    <div class="ctl"><label><span>API key Claude (hanya disimpan di browser ini)</span></label><input id="acKey" type="password" placeholder="sk-ant-…" autocomplete="off"></div>
+    <div class="row sm"><button id="acTest">Tes AI</button><button id="acDel">Hapus key</button></div>
+    <div id="acLog"></div>
+  </section>
   <section class="card">
     <div class="ch"><b>Tema &amp; Output</b></div>
     <div class="body" data-body="out"></div>
