@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id" data-ui="ember"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subtitle Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;800;900&family=Poppins:wght@400;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&family=Anton&family=Bangers&family=Luckiest+Guy&family=Permanent+Marker&family=Bungee&family=Baloo+2:wght@400;600;700;800&family=Fredoka:wght@400;600;700&family=Pacifico&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/subtitle.css">
+<link rel="stylesheet" href="css/studio.css">
+</head><body>
+<header class="top">
+  <div><h1>Subtitle Studio <span class="badge">OBS · STREAMLABS · TIKTOK</span></h1>
+  <p>Realtime · Auto-Translate · Session Recorder</p></div>
+  <div class="top-r">
+    <span id="bSrv" class="pill">Server OBS: cek…</span>
+    <span id="bAir" class="pill">Off-Air</span>
+    <button id="obs">Mode OBS</button>
+  </div>
+</header>
+
+<div class="grid">
+  <section class="card wide" id="pv">
+    <div class="ch"><b>Preview</b><span class="info" id="pvInfo"></span></div>
+    <div class="stage" id="stage"><div id="sub"></div><div id="cap"></div></div>
+    <div class="cf"><span id="pvL"></span><span id="pvR"></span></div>
+  </section>
+
+  <section class="card" id="micCard">
+    <div class="ch"><b>Mic Engine</b><span class="info" id="micInfo">Siap</span></div>
+    <div class="row"><button id="mic" class="main">Mulai mic</button><button id="rec" class="rec">● REC</button></div>
+    <div class="meter"><i id="meter"></i></div>
+    <div class="row sm"><button id="srt" disabled>Unduh .srt</button><button id="txtx" disabled>Unduh .txt</button></div>
+    <div class="body" data-body="mic"></div>
+    <div class="row"><button id="test">Test animasi</button><button id="clear">Bersihkan</button></div>
+    <div class="row"><input id="manual" type="text" placeholder="Ketik teks tes…"><button id="send" class="sq">➤</button></div>
+    <div id="status"></div>
+  </section>
+
+  <section class="card"><div class="ch"><b>Gaya &amp; Animasi</b><button class="mini" id="rAnim">Reset</button></div><div class="body" data-body="anim"></div></section>
+  <section class="card"><div class="ch"><b>Font &amp; Tipografi</b></div><div class="body" data-body="font"></div></section>
+  <section class="card"><div class="ch"><b>Warna, Kotak &amp; Glow</b></div><div class="body" data-body="color"></div></section>
+  <section class="card"><div class="ch"><b>Efek Pintar</b></div><div class="body" data-body="smart"></div></section>
+  <section class="card">
+    <div class="ch"><b>Tema &amp; Output</b></div>
+    <div class="body" data-body="out"></div>
+    <div class="row sm"><button class="url" data-t="OBS">OBS URL</button><button class="url" data-t="Streamlabs">Streamlabs</button><button class="url" data-t="TikTok LIVE Studio">TikTok LIVE Studio</button></div>
+    <div class="row sm"><button id="exp">Ekspor</button><button id="imp">Impor</button><button id="rAll">Reset semua</button></div>
+    <input type="file" id="impF" accept=".json" hidden>
+  </section>
+</div>
+<script src="js/engine.js"></script>
+<script src="js/studio.js"></script>
+</body></html>
